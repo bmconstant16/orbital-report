@@ -10,9 +10,9 @@
        <th>Launch Date</th>
        
     </tr>
-    <tr *ngFor="let singleSatellite of satellites">
+    <tr *ngFor="let singleSatellite of satellites" [class.warning] = "singleSatellite.shouldShowWarning()">
         <td>{{singleSatellite.name}}</td>
-        <td>{{singleSatellite.type}}</td>
+        <td >{{singleSatellite.type}}</td>
         <td>{{singleSatellite.operational}}</td>
         <td>{{singleSatellite.orbitType}}</td>
         <td>{{singleSatellite.launchDate}}</td> 
