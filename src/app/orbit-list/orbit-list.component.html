@@ -3,8 +3,8 @@
 
 <table>
     <tr class="header-row">
-       <th class="sortable">Name</th>
-       <th class="sortable">Type</th>
+       <th (click) = "sort('name')" class="sortable">Name</th>
+       <th (click) = "sort('type')"class="sortable">Type</th>
        <th>Operational</th>
        <th>Orbit Type</th>
        <th>Launch Date</th>
@@ -12,7 +12,7 @@
     </tr>
     <tr *ngFor="let singleSatellite of satellites" [class.warning] = "singleSatellite.shouldShowWarning()">
         <td>{{singleSatellite.name}}</td>
-        <td >{{singleSatellite.type}}</td>
+        <td>{{singleSatellite.type}}</td>
         <td>{{singleSatellite.operational}}</td>
         <td>{{singleSatellite.orbitType}}</td>
         <td>{{singleSatellite.launchDate}}</td> 
